@@ -1,0 +1,10 @@
+from utilidade.pessoa import Pessoa
+
+class Funcionario(Pessoa):
+    def __init__(self, nome, idade, data_aniversario, cargo, setor):
+        super().__init__(nome, idade, data_aniversario)
+        self.cargo = cargo
+        self.setor = setor
+
+    def bater_ponto (self):
+        print (f'{self.nome} bateu ponto como {self.cargo} no setor {self.setor}')
